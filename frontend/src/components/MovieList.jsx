@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 
 const MovieList = () => {
 
@@ -24,7 +25,7 @@ const MovieList = () => {
         <tbody>
             {movies.map(movies => {
                 let type = movie.type === 0 ? 'Série' : 'Filme';
-                let formatdate = (movie.last_view).split('T, 1')
+                let formatdate = (movie.last_view).split('T', 1)
 
                 return (
                     <tr key={movie.id}>
@@ -38,5 +39,7 @@ const MovieList = () => {
             })}
         </tbody>
     </table>
-
+    )
 }
+
+export default <MovieList;
